@@ -36,7 +36,7 @@ public class SpringIntegrationReceiverApplication {
 		return adapter;
 	}
 
-	@Bean
+
 	@ServiceActivator(inputChannel = "pubsubInputChannel")
 	public void messageReceiver(String payload) {
 		logger.info("Message arrived! Payload: {}", payload);
